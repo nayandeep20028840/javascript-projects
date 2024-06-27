@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<HTML>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<HEAD>
+  <TITLE>HOME PAGE</TITLE>
+</HEAD>
+
+<BODY>
+  <center>
+    <TABLE BORDER=1 WIDTH=1350>
+      <TR>
+        <TD background=c1bg.jpg colspan=8>
+          <center>
+            <font color=ffffff size=48>NORTH BENGAL TOURISM</font>
+          </center>
+        </TD>
+      </TR>
+      <TR>
+        <TD colspan=8 BACKGROUND="image for html_5.jpg">
+          <MARQUEE direction="RIGHT">
+            <IMG SRC="image for html_4.jpg" HEIGHT="150">
+        </TD>
+      </TR>
+      <TR ALIGN=CENTER>
+        <TD HEIGHT=5><A HREF="home.HTML">Home</A></TD>
+        <TD><A HREF="bio.html">Bio </A></TD>
+        <TD><A HREF="api.HTML">DRAG / DROP APIS </A></TD>
+
+      </TR>
+
+      <TR>
+        <TD COLSPAN=6 BGCOLOR=0ADAFF HEIGHT=400>
+          <BR><BR><BR>
+
+
+
+
+
+
+          <FONT COLOR="FF0000" SIZE=20>
+            <CENTER>VARANASI
+          </FONT><BR><BR> INTRODUCTION <CENTER><BR>
+            Varanasi, or Benaras, (also known as Kashi) is one of the oldest living cities in the world. Varanasi`s
+            Prominence in Hindu mythology is virtually unrevealed. Mark Twain, the English author and literature, who
+            was enthralled by the legend and sanctity of Benaras, once wrote : “Benaras is older than history, older
+            than tradition, older even than legend and looks twice as old as all of them put together. ”
+
+            The land of Varanasi (Kashi) has been the ultimate pilgrimage spot for Hindus for ages. Hindus believe that
+            one who is graced to die on the land of Varanasi would attain salvation and freedom from the cycle of birth
+            and re-birth. Abode of Lord Shiva and Parvati, the origins of Varanasi are yet unknown. Ganges in Varanasi
+            is believed to have the power to wash away the sins of mortals.
+
+            Ganges is said to have its origins in the tresses of Lord Shiva and in Varanasi, it expands to the mighty
+            river that we know of. The city is a center of learning and civilization for over 3000 years. With Sarnath,
+            the place where Buddha preached his first sermon after enlightenment, just 10 km away, Varanasi has been a
+            symbol of Hindu renaissance. Knowledge, philosophy, culture, devotion to Gods, Indian arts and crafts have
+            all flourished here for centuries. Also a pilgrimage place for Jains, Varanasi is believed to be the
+            birthplace of Parsvanath, the twenty-third Tirthankar.
+        </TD>
+      </TR>
+    </TABLE>
+    Download
+  </center>
+  <header align="center">
+
+    <br><br><br><br>
+    <h2><BIG><B><U>BHU campus</U></B></BIG></h2>
+    <img class="img-circle" src="image for html_6.jpg" <br><br><br><br>
+    <h2><BIG><B><U>Varanasi Ghats</U></B></BIG></h2>
+    <img src="image for html_7.jpg" <br><br><br><br>
+    <h2><BIG><B><U>Sarnath</U></B></BIG></h2>
+    <img src="image for html_8.jpg" <br><br><br><br>
+    <h2><BIG><B><U>Kashi Vishawanath Temple</U></B></BIG></h2>
+    <img src="image for html_11.jpg" <br><br><br><br>
+    <h2><BIG><B><U>BHU campus Temple</U></B></BIG></h2>
+    <img src="image for html_13.jpg" <br><br>
+    <h2>For futher information click here</h2>
+    <a href="https://en.wikipedia.org/wiki/Varanasi"> link referencing a page for further information.</a>
+    <br><br><br>
+
+    <br><br>
+    <audio controls>
+      <source src="abcd.mp3">
+    </audio>
+    <br><br><br>
+
+    <center><iframe src="abc.mp4" height="450" width="315"></iframe></center>
+    <br><br><br>
+    </div>
+    <iframe width="420" height="345" src="https://www.youtube.com/embed/rDsOi3MByCI"></iframe>
+    <br><br>
+    <div>
+      <!-- Google Map Copied Code -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115408.23982810129!2d82.92106861019738!3d25.320746099847305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2db76febcf4d%3A0x68131710853ff0b5!2sVaranasi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1649346290236!5m2!1sen!2sin"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>"
+
+      </https:>
+    </div>
+    <br>
+    <br>
+
+    <style>
+      #div1 {
+        width: 350px;
+        height: 251px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
+      }
+    </style>
+    <script>
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+      }
+    </script>
+
+
+    <p><BIG><B> Drag the image into the rectangle: </B></BIG></p>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <br>
+    <img id="drag1"
+      src=https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80"
+      draggable="true" ondragstart="drag(event)" width="336" height="250">
+
+    <br><br><br><br><br><br>
+
+
+
+  </header>
+</BODY>
+
+</HTML>

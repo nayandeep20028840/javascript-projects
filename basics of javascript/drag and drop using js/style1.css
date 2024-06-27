@@ -1,0 +1,11 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+
+#div1{
+    height: 700px;
+    border: 5px solid #aaaaaa;
+    padding: 10px;
+}

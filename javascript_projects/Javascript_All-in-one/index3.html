@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+    <div class="container">
+       
+        <div class="swiper">
+           
+            <div class="swiper-wrapper">
+              
+              <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1583267746897-2cf415887172?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXV0b21vYmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80" alt=""></div>
+              <div class="swiper-slide"><img src="https://www.focus2move.com/wp-content/uploads/2021/02/Bugatti-Divo_Lady_Bug-2020-1024-0b.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="https://images.drive.com.au/driveau/image/upload/c_fill,f_auto,g_auto,h_674,q_auto:eco,w_1200/cms/uploads/jot5cyujwrp21cwebg4d" alt=""></div>
+            </div>
+          
+            <div class="swiper-pagination"></div>
+          
+           
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+    </div>
+    
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+      loop: true,
+    
+     
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    
+     
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    
+      },
+});
+    </script>
+
+</body>
+</html>

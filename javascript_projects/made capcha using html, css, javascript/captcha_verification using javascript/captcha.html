@@ -1,0 +1,36 @@
+<html>
+
+<head>
+  <title>JS</title>
+</head>
+
+<center>
+  <h1>Captcha Verification</h1>
+
+  <img src="https://i.postimg.cc/65tN07vp/captcha1-1.png" alt="">
+  <br>
+  <br>
+  <input id="text" type="text" placeholder="Type captcha">
+  <br><br>
+  <button id="submit">submit</button><br><br>
+  <p id="P"></p>
+
+  <script>let captchatext = "V6T9JBCDS";
+
+    document.getElementById("submit").onclick = function () {
+      var str1 = document.getElementById('text').value;
+      var x = str1.localeCompare(captchatext)
+
+      if (x == 0) {
+        document.getElementById("P").innerHTML = "Captcha verification successful!✅";
+      }
+
+      else {
+        document.getElementById("P").innerHTML = "Try again you moronic robot!🤖";
+      }
+    }</script>
+
+  </body>
+</center>
+
+</html>

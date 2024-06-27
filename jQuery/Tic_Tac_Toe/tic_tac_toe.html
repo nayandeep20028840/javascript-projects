@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Start Tic Tac Toe</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="java_querry.js"></script>
+    <style>
+        body {
+            background-image: url("https://media.istockphoto.com/photos/business-marketing-strategy-planning-concept-wooden-block-tic-tac-toe-picture-id915487006?k=20&m=915487006&s=612x612&w=0&h=xZw5GLeEU75hfeewD75jmEMcHuMD8p_pxRxGyKcAVCs=");
+            color: rgb(137, 122, 122);
+            font-family: "Arial", sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(35, 231, 32);
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        #container {
+            width: 351px;
+            overflow: auto;
+            margin: 41px auto;
+            background-image: url("https://c1.wallpaperflare.com/preview/295/958/495/tic-tac-toe-empty-fields-puzzles-play.jpg");
+            padding-bottom: 41px;
+            border-radius: 11px;
+        }
+
+        #board li {
+            float: left;
+            margin: 10px;
+            height: 70px;
+            width: 70px;
+            font-size: 55px;
+            background: rgb(105, 117, 54);
+            color: rgba(204, 204, 204, 0.829);
+            list-style: none;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        #board li:hover,
+        #reset:hover {
+            cursor: pointer;
+            background: rgb(18, 138, 96);
+        }
+
+        #start {
+            border: 0;
+            background: rgb(236, 11, 11);
+            color: rgb(200, 149, 149);
+            width: 75%;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .o {
+            color: rgb(58, 58, 93) !important;
+        }
+
+        .x {
+            color: rgb(151, 19, 19) !important;
+        }
+
+        footer {
+            display: block;
+            text-align: center;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <center><button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                data-target="#myModal">Instructions</button></center>
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Instructions_</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!-- giving instruction to the users -->
+                        <p>Win: If the player has two in a row, they can place a third to get three in a row. <br>
+                            Block: If the opponent has two in a row, the player must play the third themselves to<br>
+                            block the opponent.
+                            Fork: Cause a scenario where the player has two ways to win (two non-blocked lines of
+                            2).<br>
+                            Blocking an opponent's fork: If there is only one possible fork for the opponent,<br>
+                            the player should block it. Otherwise, the player should<br>
+                            block all forks in any way that simultaneously allows them to make two<br>
+                            in a row. Otherwise, the player should make a two in a row to force the opponent<br>
+                            into defending, as long as it does not result in them producing a fork.<br>
+                            For example, if "X" has two opposite corners and "O"<br>
+                            has the center, "O" must not play a corner move to win. (Playing<br>
+                            a corner move in this scenario produces a fork for "X" to win.)<br>
+                            Center: A player marks the center. (If it is the first move of the game,<br>
+                            playing a corner move gives the second player more opportunities<br>
+                            to make a mistake and may therefore be the better choice;<br>
+                            however, it makes no difference between perfect players.)<br>
+                            Opposite corner: If the opponent is in the corner, the player plays the opposite corner.<br>
+                            Empty corner: The player plays in a corner square.<br>
+                            Empty side: The player plays in a middle square on any of the four sides</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">ok</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="container">
+        <header>
+            <h1>Tic_Tac_Toe</h1>
+        </header>
+        <ul id="board">
+            <li id="spot1"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrbRLh_6iZDbvMK9NI49NaMzzXijsJ8pur9w&usqp=CAU"
+                    style="width: 70px;height: 80px;"></li>
+            <li id="spot2"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrbRLh_6iZDbvMK9NI49NaMzzXijsJ8pur9w&usqp=CAU"
+                    style="width: 70px;height: 80px;"></li>
+            <li id="spot3"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrbRLh_6iZDbvMK9NI49NaMzzXijsJ8pur9w&usqp=CAU"
+                    style="width: 70px;height: 80px;"></li>
+            <li id="spot4"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrbRLh_6iZDbvMK9NI49NaMzzXijsJ8pur9w&usqp=CAU"
+                    style="width: 70px;height: 80px;"></li>
+            <li id="spot5"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrbRLh_6iZDbvMK9NI49NaMzzXijsJ8pur9w&usqp=CAU"
+                    style="width: 70px;height: 80px;"></li>
+            <li id="spot6"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrbRLh_6iZDbvMK9NI49NaMzzXijsJ8pur9w&usqp=CAU"
+                    style="width: 70px;height: 80px;"></li>
+            <li id="spot7"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrbRLh_6iZDbvMK9NI49NaMzzXijsJ8pur9w&usqp=CAU"
+                    style="width: 70px;height: 80px;"></li>
+            <li id="spot8"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrbRLh_6iZDbvMK9NI49NaMzzXijsJ8pur9w&usqp=CAU"
+                    style="width: 70px;height: 80px;"></li>
+            <li id="spot9"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrbRLh_6iZDbvMK9NI49NaMzzXijsJ8pur9w&usqp=CAU"
+                    style="width: 70px;height: 80px;"></li>
+        </ul>
+        <div class="clearfix"></div>
+        <footer>
+            <button id="start">Start_Again</button>
+        </footer>
+    </div>
+</body>
+
+</html>
